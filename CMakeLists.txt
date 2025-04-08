@@ -21,6 +21,7 @@ endif()
 set(SOURCE_FILES
     src/civetweb/civetweb.c
     src/webui.c
+    src/webview/wkwebview.m
 )
 
 # Library targets
