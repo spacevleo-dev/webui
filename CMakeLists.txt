@@ -18,11 +18,18 @@ if(WEBUI_USE_TLS)
 endif()
 
 # Source files (already filled)
+if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 set(SOURCE_FILES
     src/civetweb/civetweb.c
     src/webui.c
     src/webview/wkwebview.m
 )
+else()
+set(SOURCE_FILES
+    src/civetweb/civetweb.c
+    src/webui.c
+)
+endif()
 
 # Library targets
 add_library(webui ${SOURCE_FILES})
